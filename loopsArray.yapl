@@ -1,0 +1,11 @@
+array1 = (1..10)
+array2 = (1,1.2 .. 2.05)
+array3 = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+
+for i in array1 do
+	for j in array2 do
+		for k in array3 do
+			print_raw("(", i, ",", j, ",", k, ")")
+		end
+	end
+end

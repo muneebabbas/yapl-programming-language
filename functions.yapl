@@ -1,0 +1,61 @@
+# =============================================================
+# Misc recursive and non recursive functions
+# =============================================================
+
+def fact(n) -> do
+	if (n == 0) do
+		return 1
+	else do
+		return n * fact(n-1)
+	end
+end
+
+def power(base, n) -> do
+	if (n == 0) do
+		return 1
+	else do
+		return base * power(base, n-1)
+	end
+end
+
+def nth_fibonacci(x) -> do
+	if (x == 0) do
+		return 0
+	elsif (x == 1) do
+		return 1
+	else do
+		return nth_fibonacci(x-1) + nth_fibonacci(x-2)
+	end
+end
+
+def fib(n) -> do
+	fib_1 = 1
+	fib_2 = 1
+	fib = 1
+	i = 2
+	while i < n do
+		fib = fib_1 + fib_2
+		fib_1 = fib_2
+		fib_2 = fib
+		i = i + 1
+	end
+	return fib
+end
+
+def gcd(a, b) -> do
+	if b == 0 do
+		return a
+	else do
+		return gcd(b, a mod b)
+	end
+end
+
+print_raw(nth_fibonacci(7))
+
+
+
+
+
+
+
+

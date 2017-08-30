@@ -1,0 +1,51 @@
+#  =================================================
+# Tic tac toes. Doesn't validate moves though
+# ==================================================
+def tic_tac() -> do
+	tic_array = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+	arr = (1..9)
+	print_board(arr)
+	print "Sample position shown above"
+	while (1 == 1) do
+		print_board(tic_array)
+		x = input_int("X's turn. Enter 1-9: ")
+		val = tic_array[x]
+		if (val == 0) do
+			tic_array[x] = "X"
+		end
+		if (checkwinning("X", tic_array) == true) do
+			print "Player X won"
+			return ""
+		end
+		print_board(tic_array)
+		x = input_int("O's turn. Enter 0-8: ")
+		val = tic_array[x]
+		if (val == 0) do
+			tic_array[x] = "O"
+		end
+		if (checkwinning("O", tic_array) == true) do
+			print "Player O won"
+			return ""
+		end
+	end
+end
+
+
+def print_board(arr) -> do
+	print_raw(arr[1], " | ", arr[2], " | ", arr[3], " ")
+	print_raw(arr[4], " | ", arr[5], " | ", arr[6], " ")
+	print_raw(arr[7], " | ", arr[8], " | ", arr[9], " ")
+end
+
+def checkwinning(le, bo) -> do
+	return ((bo[7] == le && bo[8] == le && bo[9] == le) ||
+ 		(bo[4] == le && bo[5] == le && bo[6] == le) ||
+ 		(bo[1] == le && bo[2] == le && bo[3] == le) ||
+ 		(bo[7] == le && bo[4] == le && bo[1] == le) ||
+ 		(bo[8] == le && bo[5] == le && bo[2] == le) ||
+ 		(bo[9] == le && bo[6] == le && bo[3] == le) ||
+ 		(bo[7] == le && bo[5] == le && bo[3] == le) ||
+ 		(bo[9] == le && bo[5] == le && bo[1] == le))
+end
+
+tic_tac()

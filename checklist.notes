@@ -1,0 +1,11 @@
+Functionalities implemeted in the project:
+==========================================
+
+1) conditionals (if else elsif)
+2) while loops
+3) ranged for loops and loops over arrays
+4) function calls and recursion
+5) arrays with ranges normal syntax as well
+6) function overloading on the number of parameters
+7) Functions can return from anywhere, there could be nesting of any number of if's and a return
+	will stop the function and the return value will propagate back

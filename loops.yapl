@@ -1,0 +1,23 @@
+def forTest() -> do
+	for i in (1..5) do
+		for j in (1,3..10) do
+			if i mod 2 == 0 do 
+				print_raw("i:", i, " j:", j, " i+j:", i+j)
+			end
+		end
+	end
+end
+
+def whileTest() -> do
+	i = 0
+	while i < 10 do
+		j = 0
+		while j < 10 do
+			print_raw("i:", i, " j:", j, " i+j:", i+j)
+			j = j+1
+		end
+		i = i+1
+	end
+end
+
+whileTest()

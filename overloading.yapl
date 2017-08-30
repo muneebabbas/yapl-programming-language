@@ -1,0 +1,20 @@
+# =================================================
+# Function overloading on the number of arguments
+# =================================================
+
+def overload(a, b) -> do
+	print_raw("This is the function with two arguments -> ", a, " ", b)
+end
+
+def overload(a, b, c) -> do
+	print_raw("This is the function with three arguments -> ", a, " ", b, " ", c)
+end
+
+def overload(a) -> do
+	print_raw("This is the function with one argument -> ", a)
+end
+
+def overload(a, b, c, d) -> do
+	print_raw("This is the function with four arguments -> ", a, " ", b, " ", c, " ", d)
+end
+overload(1, "Test", 10, 12)

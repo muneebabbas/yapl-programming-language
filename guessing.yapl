@@ -1,0 +1,26 @@
+# =================================================
+# Number Guessing Game
+# ==================================================
+def number_guessing(lo, hi) -> do
+	print "Welcome to Number guessing game"
+	random = randint(lo, hi)
+	guess = input_int("Enter your guess: ")
+	if (guess == random) do
+		print "You won the game in the first try"
+		return ""
+	end
+	count = 1
+	while (guess != random) do
+		if (guess < random) do
+			print "You guessed a smaller number"
+		else do
+			print "You guessed a bigger number"
+		end
+		guess = input_int("Enter your guess: ")
+		count = count + 1
+	end
+	print "Congratulation, you won . Number of tries"
+	print count
+end
+
+number_guessing(0, 50)
